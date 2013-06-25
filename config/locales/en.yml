@@ -9,3 +9,6 @@ en:
       placeholder: Search by tag
   actions:
     search: Search
+  titles:
+    public_feed: Flickr Public Feed
+    by_tag: Images with '%{tag}'

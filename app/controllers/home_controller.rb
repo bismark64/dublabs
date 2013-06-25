@@ -16,7 +16,8 @@ class HomeController < ApplicationController
   end
 
   def tag
-    @items = FlickrFeed.update(params[:search])
+    @tag = params[:search]
+    @items = FlickrFeed.update(@tag)
 
     respond_to do |format|
       format.html { render 'index'}

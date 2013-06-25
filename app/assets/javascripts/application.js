@@ -32,6 +32,7 @@ Dublabs.lightbox = function(){
 
 Dublabs.masonry = function(){
   $container = $('.feed');
+
   $container.imagesLoaded( function (){
     $container.masonry({
       itemSelector: '.item',
@@ -43,9 +44,15 @@ Dublabs.masonry = function(){
 }
 
 Dublabs.loaders = function(){
-  var $overlay = $("#overlay");
-  var $loader = $("#loading");
-  var $triggers = $("a.brand, input[type='submit'], .pagination li a");
+  $container = $('.feed');
+  $overlay = $("#overlay");
+  $loader = $("#loading");
+  $triggers = $("a.brand, input[type='submit'], .pagination li a");
+
+  $container.imagesLoaded(function(){
+    $overlay.hide();
+    $loader.hide();
+  });
 
   $triggers.click(function(){
     $overlay.show();

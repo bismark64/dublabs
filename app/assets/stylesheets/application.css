@@ -48,7 +48,6 @@ body.fixed{
 
 /* Overlay */
 #overlay{
-  display:none;
   position: fixed;
   top: 0;
   left: 0;
@@ -62,7 +61,6 @@ body.fixed{
   z-index: 9;
 }
 #loading{
-  display:none;
   background: url("loader.gif") no-repeat top left;
   position: relative;
   left: 50%;

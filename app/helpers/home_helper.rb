@@ -1,4 +1,8 @@
 module HomeHelper
+  def home_title(tag)
+    tag.present? ? t("titles.by_tag", :tag => tag.capitalize) : t("titles.public_feed")
+  end
+
   def title(item)
     content_tag :a, item.title, :class => "title-link",:href => larger_image_path(id: item.id), :data => {:toggle => 'modal', :target => "#modal-#{item.id}"}
   end
