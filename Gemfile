@@ -28,7 +28,7 @@ group :development do
 end
 
 group :test do
-  gem 'cucumber-rails'
+  gem 'cucumber-rails', :require => false
   gem "rspec-rails"
   gem 'factory_girl_rails'
   gem 'database_cleaner'
