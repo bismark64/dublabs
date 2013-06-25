@@ -2,7 +2,7 @@ require "spec_helper"
 
 module FlickrJson
   describe PublicFeed do
-    let(:feed){ PublicFeed.new }
+    let(:feed){ described_class.new }
     let(:json){ feed.json_items }
     
     it "fetches a json object containing the Flickr Public Feed" do

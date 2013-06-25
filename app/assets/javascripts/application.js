@@ -17,7 +17,20 @@
 //= require masonry/jquery.masonry
 //= require_tree .
 
-$(function(){
+var Dublabs = Dublabs || {};
+
+Dublabs.init = Dublabs.init || {};
+Dublabs.lightbox = Dublabs.lightbox || {};
+Dublabs.masonry = Dublabs.masonry || {};
+Dublabs.loaders = Dublabs.loaders || {};
+
+Dublabs.lightbox = function(){
+  $('.modal').on('show', function () {
+    $('.modal-body',this).css({width:'auto',height:'auto', 'max-height':'100%', 'max-width':'100%'});
+  });
+}
+
+Dublabs.masonry = function(){
   $container = $('.feed');
   $container.imagesLoaded( function (){
     $container.masonry({
@@ -27,8 +40,23 @@ $(function(){
       isFitWidth: true
     });
   });
-  
-  $('.modal').on('show', function () {
-    $('.modal-body',this).css({width:'auto',height:'auto', 'max-height':'100%', 'max-width':'100%'});
+}
+
+Dublabs.loaders = function(){
+  var $overlay = $("#overlay");
+  var $loader = $("#loading");
+  var $triggers = $("a.brand, input[type='submit'], .pagination li a");
+
+  $triggers.click(function(){
+    $overlay.show();
+    $loader.show();
   });
-});
+}
+
+Dublabs.init = function(){
+  Dublabs.lightbox();
+  Dublabs.masonry();
+  Dublabs.loaders();
+}
+
+$(function(){ Dublabs.init() });

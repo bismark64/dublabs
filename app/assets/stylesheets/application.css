@@ -19,16 +19,7 @@
  *= require_tree .
  */
 
-body.fixed{
-  background-color: rgba(0,0,0,.05);
-}
-.tag-search input[type="submit"].btn{
-  margin-top: 0;
-  margin-left: 10px;
-}
-#main-container{
-  margin-top: 60px;
-}
+/* General Styles */
 p{
   color: #777;
 }
@@ -41,4 +32,44 @@ a{
   white-space: -moz-pre-wrap; /* Mozilla */
   white-space: -hp-pre-wrap;  /* HP Printers */
   word-wrap: break-word;      /* IE 5+ */
+}
+
+/* Layout */
+body.fixed{
+  background-color: rgba(0,0,0,.05);
+}
+#main-container{
+  margin-top: 60px;
+}
+.tag-search input[type="submit"].btn{
+  margin-top: 0;
+  margin-left: 10px;
+}
+
+/* Overlay */
+#overlay{
+  display:none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  filter:alpha(opacity=70);
+  -moz-opacity:0.7;
+  -khtml-opacity: 0.7;
+  opacity: 0.7;
+  z-index: 9;
+}
+#loading{
+  display:none;
+  background: url("loader.gif") no-repeat top left;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  width: 128px;
+  height: 128px;
+  margin-left: -64px;
+  margin-top: -64px;
+  z-index: 999999;
 }

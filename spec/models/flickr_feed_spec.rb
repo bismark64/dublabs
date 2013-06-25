@@ -2,9 +2,9 @@ require "spec_helper"
 
 module Dublabs
   describe FlickrFeed do
-    let(:json_feed){ FlickrFeed.send(:get_json_feed) }
-    let(:items){ FlickrFeed.send(:items, json_feed) }
-    let(:updated_feed){ FlickrFeed.update }
+    let(:json_feed){ described_class.send(:get_json_feed) }
+    let(:items){ described_class.send(:items, json_feed) }
+    let(:updated_feed){ described_class.update }
 
     it "stores the fetched feed in memory" do
       items.should_not be_empty
