@@ -9,8 +9,7 @@ module FlickrJson
     TAGGED_URL = "http://api.flickr.com/services/feeds/photos_public.gne?format=json&tag="
 
     def initialize(tag=nil)
-      url = tag.nil? ? BASE_URL : TAGGED_URL + tag
-      @buffer = open(url).read
+      @buffer = open(url(tag)).read
     end
 
     def json_items
@@ -21,6 +20,11 @@ module FlickrJson
     end
 
     private
+
+    def url(tag)
+      url = tag.nil? ? BASE_URL : TAGGED_URL + tag
+      URI::encode(url)
+    end
 
     def get_json
       buffer.gsub("jsonFlickrFeed(", '').gsub("})", "}")
