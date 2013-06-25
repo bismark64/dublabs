@@ -1,0 +1,20 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  host: localhost
+  database: dublabs
+  pool: 5
+  username: postgres
+  password: postgres
+
+test: &test
+  adapter: postgresql
+  encoding: unicode
+  host: localhost
+  database: dublabs_test
+  pool: 5
+  username: postgres
+  password: postgres
+
+cucumber:
+  <<: *test

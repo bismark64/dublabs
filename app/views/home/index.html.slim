@@ -1,0 +1,8 @@
+h1 Flickr Public Feed
+
+= will_paginate @items, renderer: BootstrapPagination::Rails
+
+.feed.row-fluid.transitions-enabled
+  = render :partial => "feed/item", :collection => @items, :as => :item
+
+= will_paginate @items, renderer: BootstrapPagination::Rails

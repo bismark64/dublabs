@@ -1,0 +1,7 @@
+.item.span3
+  h4.title
+    = title(item)
+  .description
+    = description(item)
+
+= render :partial => "modal", :locals => {:item => item}
