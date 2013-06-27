@@ -6,6 +6,7 @@ gem 'rails', '3.2.9'
 gem 'pg'
 gem 'slim'
 gem 'will_paginate', '~> 3.0.0'
+gem 'will_paginate-bootstrap'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -16,7 +17,6 @@ group :assets do
   gem 'therubyracer', :platforms => :ruby
   gem "less-rails"
   gem "twitter-bootstrap-rails", :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
-  gem 'will_paginate-bootstrap'
 
   gem 'uglifier', '>= 1.0.3'
 end
