@@ -16,5 +16,14 @@ test: &test
   username: postgres
   password: postgres
 
+production:
+  adapter: postgresql
+  encoding: unicode
+  host: localhost
+  database: dublabs_production
+  pool: 5
+  username: postgres
+  password: postgres
+
 cucumber:
   <<: *test
