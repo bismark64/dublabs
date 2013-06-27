@@ -28,3 +28,6 @@ I've tested with Cucumber & Rspec so to run the tests:
     cucumber
           
     bundle exec rspec
+
+Demo
+----
