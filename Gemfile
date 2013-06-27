@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.9'
-gem 'sqlite3'
 gem 'pg'
 gem 'slim'
 gem 'will_paginate', '~> 3.0.0'
@@ -25,6 +24,7 @@ gem 'masonry-rails'
 
 group :development do
   gem 'thin'
+  gem 'sqlite3'
 end
 
 group :test do
